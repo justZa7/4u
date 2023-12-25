@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap');
+
+* {
+  transition: all 0.2s ease-in-out;
+}
+
+body {
+  background-color: brown;
+  display: grid;
+  place-items: center;
+  height: 100vh;
+  margin: 0;
+  font-family: 'Open sans', sans-serif;
+  color: #fff;
+}
+
+.card {
+  background-color: #fdfdfd;
+  border-radius: 4px;
+  height: 85vh;
+  width: 80vw;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1em;
+  overflow: auto;
+}
+
+.pict {
+  max-height: 35vh;  
+  border-radius: 50%;
+}
+
+@media only screen and (min-width: 1000px) {
+  .card {
+    flex-direction: row-reverse;
+  }
+  .card img.pict {
+    width: 100%;
+    max-width: 45vw;
+    max-height: unset;
+  }
+}
+
+@media only screen and (max-heigth: 640px) {
+  .card {
+    flex-direction: row-reverse;
+    }
+    .card img.pict {
+      width: 100%;
+      max-width: 45vw;
+      max-height: unset;
+    }
+}
+
+#ctrlBtn {
+  color: #333;
+}
+
+.button {
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  line-height: 30px;
+  border: 2px solid #333;
+  cursor: pointer;
+}
+
+.text {
+  color: #333;
+  padding: 1em;
+}
+
+.muted {
+  opacity: 0.8;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+body.play-music {
+  animation: fadeIn 2s ease-in-out;
+}
+
+#progress {
+  -webkit-appearance: none;
+  width: 70%;
+  height: 4px;
+  background-color: #222;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+#progress::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  height: 15px;
+  width: 15px;
+  background-color: #000000;
+  border-radius: 50%;
+}
